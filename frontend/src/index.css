@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 40 20% 95%;
+        --foreground: 0 0% 6%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 6%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 6%;
+        --primary: 0 0% 6%;
+        --primary-foreground: 40 20% 95%;
+        --secondary: 40 14% 90%;
+        --secondary-foreground: 0 0% 6%;
+        --muted: 40 14% 90%;
+        --muted-foreground: 30 6% 41%;
+        --accent: 40 14% 90%;
+        --accent-foreground: 0 0% 6%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 36 10% 86%;
+        --input: 36 10% 86%;
+        --ring: 0 0% 6%;
+        --radius: 0.25rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    body {
+        @apply bg-paper text-ink font-sans;
+        margin: 0;
+    }
+    ::selection {
+        @apply bg-ink text-paper;
+    }
+}
+
+/* film grain overlay */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 240 240' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 240px 240px;
+}
+
+.text-outline-light {
+    -webkit-text-stroke: 1.5px rgba(244, 242, 237, 0.4);
+    color: transparent;
+}
+
+.spot-card {
+    position: relative;
+}
+.spot-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(
+        420px circle at var(--mx, 50%) var(--my, 50%),
+        rgba(191, 74, 30, 0.12),
+        transparent 65%
+    );
+}
+.spot-card:hover::before {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .motion-safe-only {
+        display: none;
+    }
+}

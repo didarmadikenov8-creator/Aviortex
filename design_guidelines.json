@@ -1,0 +1,142 @@
+{
+  "project_info": {
+    "title": "AVIORTEX — Premium Industrial B2B Sewing Production",
+    "language": "Russian",
+    "location": "Almaty, Kazakhstan",
+    "niche": "B2B Sewing Factory (Швейный цех)",
+    "target_audience": "Corporate clients, retail brands, delivery services, event agencies, promotional companies",
+    "design_tone": "Premium industrial, minimal, highly authoritative, tactile, confident, clean editorial"
+  },
+  "style_archetype": {
+    "name": "Swiss Industrial Precision & Warm Monochrome",
+    "background_philosophy": "Mostly clean warm whites (#FAFAFA, #FFFFFF) and architectural light grays (#F4F3F0, #EAE8E3). Selective midnight industrial dark sections (#0D0D0D, #141414) for high-impact visual contrast.",
+    "typography_philosophy": "Uncompromising black typography (#0F0F0F), high contrast ratios, wide tracking for labels, tight tracking for display titles.",
+    "forbidden_patterns": [
+      "No generic AI purple/blue gradients (#7351B7 is forbidden)",
+      "No price tags or invented claims",
+      "No rounded bubbly colorful buttons — use crisp rectangular or subtle rounded industrial buttons",
+      "No cramped card layouts — double/triple padding everywhere",
+      "No plain unstyled text inputs — high-precision dark/light input fields"
+    ]
+  },
+  "typography": {
+    "heading_font": "Syne, Cabinet Grotesk, or Unbounded / Barlow style sans (Bold uppercase industrial display weight)",
+    "body_font": "Inter or DM Sans (High legibility, extended line-height for Russian Cyrillic)",
+    "mono_font": "JetBrains Mono (For numeric step markers, trust metrics, technical specs)",
+    "scale": {
+      "hero_title": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-extrabold uppercase leading-[1.05]",
+      "section_title": "text-3xl sm:text-4xl lg:text-5xl tracking-tight font-bold uppercase text-neutral-900",
+      "card_title": "text-xl sm:text-2xl font-semibold text-neutral-900",
+      "body_text": "text-base sm:text-lg text-neutral-600 leading-relaxed",
+      "mono_label": "font-mono text-xs sm:text-sm tracking-widest uppercase text-neutral-500"
+    }
+  },
+  "colors": {
+    "background": "#FAFAFA",
+    "background_alt": "#F4F3F0",
+    "dark_section": "#0D0D0D",
+    "dark_card": "#181818",
+    "text_primary": "#0F0F0F",
+    "text_muted": "#666666",
+    "text_on_dark": "#F5F5F5",
+    "accent_brand": "#111111",
+    "accent_highlight": "#C80000",
+    "whatsapp_green": "#25D366",
+    "border_light": "rgba(15, 15, 15, 0.12)",
+    "border_dark": "rgba(255, 255, 255, 0.15)"
+  },
+  "key_features_and_motion": {
+    "hero_reveal": "Kinetic line-by-line masked text reveal using Framer Motion with staggerChildren",
+    "smooth_scroll": "Lenis smooth scroll wrapper integrated in App.js",
+    "editorial_marquee": "Slow, elegant auto-scrolling industrial ribbon featuring production keywords",
+    "parallax": "Subtle translate-y motion on hero image and workshop cards during scroll",
+    "order_manifesto": "5 numbered chapters with accordion/tab reveal detailing the production workflow",
+    "whatsapp_calculator": "Interactive order calculation form that composes pre-filled WhatsApp link (`https://wa.me/77077272363?text=...`)",
+    "floating_whatsapp": "Persistent bottom-right floating WhatsApp button with active status ping"
+  },
+  "sections_breakdown": [
+    {
+      "id": "hero",
+      "name": "Hero & Trust Indicators",
+      "content": "Kinetic headline: «Швейное производство для вашего бизнеса». Subtitle: 15+ лет на рынке Казахстана, 2000+ выполненных заказов. CTA buttons: «Рассчитать стоимость» (scroll to calc) and «Связаться в WhatsApp». Trust metrics bar: 15+ лет опыта, 2000+ клиентов, Доставка по всему Казахстану.",
+      "layout": "Grid split hero on desktop, stacked on mobile with high-contrast background overlay."
+    },
+    {
+      "id": "products",
+      "name": "6 Product Categories (Продукция)",
+      "items": [
+        "Термосумки (Для служб доставки и HoReCa)",
+        "Спецодежда (Униформа, рабочие костюмы, жилеты)",
+        "Шопперы (Эко-сумки и брендированный текстиль)",
+        "Пледы (Корпоративные пледы для брендов)",
+        "Головные уборы (Бейсболки, шапки, баффы)",
+        "Брендирование (Вышивка, шелкография, термотрансфер)"
+      ],
+      "layout": "Asymmetric Bento Grid with spotlight image cards, quick action 'Запросить расчет' triggering pre-selection in form."
+    },
+    {
+      "id": "portfolio",
+      "name": "Нам доверяют бизнесы (Clients & Gallery)",
+      "clients": ["CHOCOFOOD", "MELOMAN", "FREEDOM"],
+      "content": "Case studies of corporate clients + high-res gallery of real branded textile work."
+    },
+    {
+      "id": "process",
+      "name": "Как сделать заказ (5 Manifesto Steps)",
+      "steps": [
+        "01. Консультация и ТЗ (Обсуждаем задачи, тираж, материалы и сроки)",
+        "02. Образец и расчет (Отшиваем тестовый образец, согласовываем качество)",
+        "03. Договор и оплата (Фиксируем цены, параметры и сроки выполнения)",
+        "04. Пошив и ОТК (Массовое производство с двойным контролем качества)",
+        "05. Доставка (Упаковка и отправка по Алматы и всему Казахстану)"
+      ]
+    },
+    {
+      "id": "calculator",
+      "name": "Калькулятор заказа (WhatsApp Order Composer)",
+      "fields": [
+        "Тип продукции (Dropdown / Pill selectors)",
+        "Тираж (Количество: slider or number input, e.g. 50, 100, 500, 1000+)",
+        "Имя контактного лица",
+        "Номер телефона",
+        "Комментарий к заказу"
+      ],
+      "action": "Opens WhatsApp with formatted message: «Здравствуйте! Хочу рассчитать стоимость пошива: [Продукция], тираж: [Количество] шт. Мое имя: [Имя], тел: [Телефон].»"
+    },
+    {
+      "id": "about",
+      "name": "О компании AVIORTEX",
+      "content": "15+ лет производственной экспертизы в Алматы. Парк современный швейных машин, раскройный цех, печатное и вышивальное оборудование."
+    },
+    {
+      "id": "contacts",
+      "name": "Контакты и Локация",
+      "details": {
+        "address": "г. Алматы, ул. Яссауи, 139",
+        "phone_whatsapp": "+7 707 727 23 63",
+        "instagram": "@aviortex.almaty",
+        "hours": "Пн-Сб: 09:00 – 18:00"
+      }
+    }
+  ],
+  "image_urls": {
+    "hero_factory": "https://images.unsplash.com/photo-1741176505800-caaa3a52631a?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "sewing_machines": "https://images.pexels.com/photos/31591460/pexels-photo-31591460.jpeg?auto=compress&cs=tinysrgb&w=940",
+    "workshop_detail": "https://images.pexels.com/photos/4614227/pexels-photo-4614227.jpeg?auto=compress&cs=tinysrgb&w=940",
+    "thermal_bags": "https://images.pexels.com/photos/7706452/pexels-photo-7706452.jpeg?auto=compress&cs=tinysrgb&w=940",
+    "thermal_bags_2": "https://images.unsplash.com/photo-1679928615137-cb2a153ab3a9?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "workwear": "https://images.unsplash.com/photo-1607718330023-64d147bac374?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "shoppers_tote": "https://images.unsplash.com/photo-1597022332401-b27b6aa19245?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "blankets": "https://images.unsplash.com/photo-1576192350050-d9e08ee1f122?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "headwear": "https://images.unsplash.com/photo-1598371487006-59cd87776faf?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "branding_embroidery": "https://images.unsplash.com/photo-1657668282135-b620193e7801?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Install `lenis` (@studio-freight/lenis or lenis) for smooth scrolling.",
+    "Implement Framer Motion kinetic headline reveal with line masking on load.",
+    "Include mandatory testids on ALL interactive elements (buttons, form inputs, nav links, tabs, WhatsApp trigger).",
+    "Ensure Russian text is natural, professional, and contains NO prices or non-verified facts.",
+    "Ensure total responsiveness for mobile down to 390px width.",
+    "Integrate sonner toast notifications for feedback on form actions."
+  ]
+}
